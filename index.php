@@ -6,8 +6,8 @@ $query = "";
 
 if (!empty($_GET['s'])) {
 
-    $query = trim(htmlspecialchars($_GET['s']));
-    //Selectionne tous les articles où le titre ou le contenu a $query
+    $query = strtolower(trim(htmlspecialchars($_GET['s'])));
+    //Selectionne tous les articles où le titre ou le contenu contient $query
     $request = $db->query("SELECT * FROM article WHERE titre LIKE '%$query%' OR contenu LIKE '%$query%'");
 
     //Récupère tous les articles sous forme d'un tableau
@@ -25,7 +25,7 @@ if (!empty($_GET['s'])) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Test de recherche</title>
+    <title>Notre simple blog</title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
@@ -49,19 +49,22 @@ if (!empty($_GET['s'])) {
         <?php if (empty($articles)): ?>
             <div class="error">Pas d'article disponible</div>
         <?php else: ?>
+
             <?php if (isset($nb_article)): ?>
-                <span><?= $nb_article ?> resultats trouvé(s) suite à votre recherche </span>
+                <span><?= $nb_article ?> resultat(s) trouvé(s) suite à votre recherche </span>
             <?php endif ?>
-            <?php foreach ($articles as $article): ?>
+
+            <?php foreach (array_reverse($articles) as $article): ?>
                 <article class="article">
                     <h2 class="titre"><a href="#"><?= $article['titre'] ?></a></h2>
 
                     <div class="contenu">
                         <?= substr($article['contenu'], 0, 200) ?>...
-                        [<a href="#">Lire la suite</a>]
+                        [<a class="btn" href="#">Lire la suite</a>]
                     </div>
                 </article>
             <?php endforeach ?>
+
         <?php endif ?>
     </div>
 </div>

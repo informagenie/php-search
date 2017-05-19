@@ -112,7 +112,7 @@ a:hover, .titre a:hover, #titre a:hover, .btn:hover {
 }
 
 .article {
-    box-shadow: 1px 1px 1px green;
+    box-shadow: 1px 1px 1px #43a0a3;
     padding: 0 5px 10px 5px;
     margin: 10px;
 }
