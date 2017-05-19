@@ -1,25 +1,20 @@
 <?php
-
-require(__DIR__ . '/includes/connexion.php');
+require_once __DIR__ . '/includes/config.php';
 
 $query = "";
 
+$sql = "SELECT titre, contenu, DATE_FORMAT(date_creattion, '%d/%m/%Y à %i:%s') creation FROM article";
 if (!empty($_GET['s'])) {
-
     $query = strtolower(trim(htmlspecialchars($_GET['s'])));
-    //Selectionne tous les articles où le titre ou le contenu contient $query
-    $request = $db->query("SELECT * FROM article WHERE titre LIKE '%$query%' OR contenu LIKE '%$query%'");
-
-    //Récupère tous les articles sous forme d'un tableau
-    $articles = $request->fetchAll();
-
-
-    $nb_article = count($articles);
-
-} else {
-    $request = $db->query('SELECT * FROM article');
-    $articles = $request->fetchAll();
+    $sql .= " WHERE titre LIKE '%$query%' OR contenu LIKE '%$query%'";
 }
+
+$request = $db->query($sql);
+//Récupère tous les articles sous forme d'un tableau
+$articles = $request->fetchAll();
+
+$nb_article = count($articles);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -41,7 +36,7 @@ if (!empty($_GET['s'])) {
 
     <div class="search">
         <form action="./">
-            <input value="<?= $query ?>" placeholder="Votre recherche" type="text" name="s" id="search">
+            <input value="<?= $query ?>" autofocus placeholder="Votre recherche" type="text" name="s" id="search">
             <input type="submit" value="Rechercher" class="btn">
         </form>
     </div>
@@ -50,16 +45,16 @@ if (!empty($_GET['s'])) {
             <div class="error">Pas d'article disponible</div>
         <?php else: ?>
 
-            <?php if (isset($nb_article)): ?>
+            <?php if (!empty($query)): ?>
                 <span><?= $nb_article ?> resultat(s) trouvé(s) suite à votre recherche </span>
             <?php endif ?>
 
             <?php foreach (array_reverse($articles) as $article): ?>
                 <article class="article">
                     <h2 class="titre"><a href="#"><?= $article['titre'] ?></a></h2>
-
+                    <date><?= $article['creation'] ?></date>
                     <div class="contenu">
-                        <?= substr($article['contenu'], 0, 200) ?>...
+                        <?= mark($query, substr($article['contenu'], 0, 200)) ?>...
                         [<a class="btn" href="#">Lire la suite</a>]
                     </div>
                 </article>

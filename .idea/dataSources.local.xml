@@ -7,5 +7,9 @@
       <schema-pattern>informagenie.*</schema-pattern>
       <default-schemas>informagenie.*</default-schemas>
     </data-source>
+    <data-source name="Sqlite (Xerial) - db" uuid="9f517181-55c2-4c19-9626-133eeea3ec1c">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
   </component>
 </project>
