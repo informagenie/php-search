@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eed16faf-ed0e-400f-b054-59d5461c3d10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.MD" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="search.iws" />
@@ -52,7 +53,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.2692308">
               <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-              <folding />
+              <folding>
+                <marker date="1495160562707" expanded="true" signature="12:101" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,30 +63,49 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.692307">
-              <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+            <state vertical-scroll-proportion="-8.423077">
+              <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
               <folding>
-                <marker date="1495163915762" expanded="true" signature="152:191" placeholder="SELECT * FRO..article..." />
-                <marker date="1495163915762" expanded="true" signature="152:200" placeholder="SELECT * FRO..article..." />
-                <marker date="1495163915762" expanded="true" signature="152:201" placeholder="SELECT * FRO..article..." />
-                <marker date="1495163915762" expanded="true" signature="152:375" placeholder="SELECT * FRO..article..." />
-                <marker date="1495163915762" expanded="true" signature="279:300" placeholder="SELECT * FRO..article..." />
-                <marker date="1495163915762" expanded="true" signature="379:1366" placeholder="..." />
-                <marker date="1495163915762" expanded="true" signature="386:405" placeholder="..." />
-                <marker date="1495163915762" expanded="true" signature="386:648" placeholder="..." />
-                <marker date="1495163915762" expanded="true" signature="655:1366" placeholder="..." />
+                <marker date="1495168851134" expanded="true" signature="242:281" placeholder="SELECT * FRO..article..." />
+                <marker date="1495168851134" expanded="true" signature="242:290" placeholder="SELECT * FRO..article..." />
+                <marker date="1495168851134" expanded="true" signature="242:307" placeholder="SELECT * FRO..article..." />
+                <marker date="1495168851134" expanded="true" signature="242:318" placeholder="SELECT * FRO..article..." />
+                <marker date="1495168851134" expanded="true" signature="242:588" placeholder="SELECT * FRO..article..." />
+                <marker date="1495168851134" expanded="true" signature="493:514" placeholder="SELECT * FRO..article..." />
+                <marker date="1495168851134" expanded="true" signature="592:2138" placeholder="..." />
+                <marker date="1495168851134" expanded="true" signature="599:618" placeholder="..." />
+                <marker date="1495168851134" expanded="true" signature="599:861" placeholder="..." />
+                <marker date="1495168851134" expanded="true" signature="868:2138" placeholder="..." />
+                <marker date="1495168851134" expanded="true" signature="1659:1723" placeholder="..." />
+                <marker date="1495168851134" expanded="true" signature="1786:1831" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7377892">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="22.23077">
+              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.MD" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.MD">
+          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.2361111">
+                <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -133,6 +155,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/README.MD" />
       </list>
     </option>
   </component>
@@ -320,15 +343,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
+          <folding>
+            <marker date="1495160562707" expanded="true" signature="12:101" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -347,28 +364,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.692307">
-          <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+        <state vertical-scroll-proportion="-8.423077">
+          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
           <folding>
-            <marker date="1495163915762" expanded="true" signature="152:191" placeholder="SELECT * FRO..article..." />
-            <marker date="1495163915762" expanded="true" signature="152:200" placeholder="SELECT * FRO..article..." />
-            <marker date="1495163915762" expanded="true" signature="152:201" placeholder="SELECT * FRO..article..." />
-            <marker date="1495163915762" expanded="true" signature="152:375" placeholder="SELECT * FRO..article..." />
-            <marker date="1495163915762" expanded="true" signature="279:300" placeholder="SELECT * FRO..article..." />
-            <marker date="1495163915762" expanded="true" signature="379:1366" placeholder="..." />
-            <marker date="1495163915762" expanded="true" signature="386:405" placeholder="..." />
-            <marker date="1495163915762" expanded="true" signature="386:648" placeholder="..." />
-            <marker date="1495163915762" expanded="true" signature="655:1366" placeholder="..." />
+            <marker date="1495168851134" expanded="true" signature="242:281" placeholder="SELECT * FRO..article..." />
+            <marker date="1495168851134" expanded="true" signature="242:290" placeholder="SELECT * FRO..article..." />
+            <marker date="1495168851134" expanded="true" signature="242:307" placeholder="SELECT * FRO..article..." />
+            <marker date="1495168851134" expanded="true" signature="242:318" placeholder="SELECT * FRO..article..." />
+            <marker date="1495168851134" expanded="true" signature="242:588" placeholder="SELECT * FRO..article..." />
+            <marker date="1495168851134" expanded="true" signature="493:514" placeholder="SELECT * FRO..article..." />
+            <marker date="1495168851134" expanded="true" signature="592:2138" placeholder="..." />
+            <marker date="1495168851134" expanded="true" signature="599:618" placeholder="..." />
+            <marker date="1495168851134" expanded="true" signature="599:861" placeholder="..." />
+            <marker date="1495168851134" expanded="true" signature="868:2138" placeholder="..." />
+            <marker date="1495168851134" expanded="true" signature="1659:1723" placeholder="..." />
+            <marker date="1495168851134" expanded="true" signature="1786:1831" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7377892">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="22.23077">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.2361111">
+            <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

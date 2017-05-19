@@ -1,20 +1,27 @@
 <?php
 
-
 require(__DIR__ . '/includes/connexion.php');
 
+$query = "";
 
 if (!empty($_GET['s'])) {
-    $query = htmlspecialchars($_GET['s']);
-    $request = $db->query("SELECT * FROM article WHERE titre LIKE '%$query%'");
+
+    $query = trim(htmlspecialchars($_GET['s']));
+    //Selectionne tous les articles où le titre ou le contenu a $query
+    $request = $db->query("SELECT * FROM article WHERE titre LIKE '%$query%' OR contenu LIKE '%$query%'");
+
+    //Récupère tous les articles sous forme d'un tableau
     $articles = $request->fetchAll();
+
+
+    $nb_article = count($articles);
+
 } else {
     $request = $db->query('SELECT * FROM article');
     $articles = $request->fetchAll();
 }
 ?>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -24,16 +31,30 @@ if (!empty($_GET['s'])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <h1 id="titre"><a href="#">Notre simple blog</a></h1>
+<header>
+    <div id="titre">
+        <h1><a href="./">Notre simple blog</a></h1>
+    </div>
+</header>
 
+<div class="container">
+
+    <div class="search">
+        <form action="./">
+            <input value="<?= $query ?>" placeholder="Votre recherche" type="text" name="s" id="search">
+            <input type="submit" value="Rechercher" class="btn">
+        </form>
+    </div>
     <div class="article">
         <?php if (empty($articles)): ?>
             <div class="error">Pas d'article disponible</div>
         <?php else: ?>
+            <?php if (isset($nb_article)): ?>
+                <span><?= $nb_article ?> resultats trouvé(s) suite à votre recherche </span>
+            <?php endif ?>
             <?php foreach ($articles as $article): ?>
                 <article class="article">
-                    <h1 class="titre"><a href="#"><?= $article['titre'] ?></a></h1>
+                    <h2 class="titre"><a href="#"><?= $article['titre'] ?></a></h2>
 
                     <div class="contenu">
                         <?= substr($article['contenu'], 0, 200) ?>...
@@ -44,5 +65,8 @@ if (!empty($_GET['s'])) {
         <?php endif ?>
     </div>
 </div>
+<footer id="footer">
+    <p><a href="http://www.informagenie.com">Informagenie</a></p>
+</footer>
 </body>
 </html>

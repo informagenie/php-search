@@ -1,5 +1,15 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input, p,span, article {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 body {
-    overflow: hidden;
     background-color: #F0F0F0;
 }
 
@@ -11,23 +21,82 @@ body {
     .container {
         width: 100%;
     }
+
+    .search {
+        text-align: right;
+        width: 100%;
+    }
+
+    .search #search {
+        display: inline-block;
+        width: 70%;
+        margin-bottom: 5px;
+    }
+
+    .search input[type=submit] {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
 }
 
 a {
     text-decoration: none;
+    -webkit-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -ms-transition: color 500ms;
+    -o-transition: color 500ms;
+    transition: color 500ms;
 }
 
-a:hover {
+a:hover, .titre a:hover, #titre a:hover, .btn:hover {
     color: #ff00b0;
 }
+
+/* Barre de recherche  */
+
+.search {
+    text-align: right;
+}
+
+.search #search {
+    width: 50%;
+    line-height: 40px;
+    background-color: inherit;
+    outline-style: none;
+    border: 1px none yellow;
+    border-bottom: 1px solid #43a0a3;
+}
+
+#search {
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: border-bottom 300ms;
+}
+
+.search #search:focus {
+    border-bottom: 3px solid #43a0a3;
+}
+
+.btn {
+    background-color: #43a0a3;
+    color: #F0F0F0;
+    line-height: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Article */
 
 #titre {
     margin: 10px 0 50px 0;
 }
 
-.titre, #titre {
+.titre, #titre, #footer {
 
-    padding: 10px;
+    padding: 2px;
     background: #43a0a3;
 }
 
@@ -38,12 +107,19 @@ a:hover {
 
 .error {
     color: white;
-    background: #a2241f;
-    padding: 5px;
+    background: #a2004e;
+    padding: 10px;
 }
 
 .article {
     box-shadow: 1px 1px 1px green;
     padding: 0 5px 10px 5px;
     margin: 10px;
+}
+
+/* Footer */
+
+#footer {
+    bottom: 0px;
+    width: 100%;
 }
