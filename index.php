@@ -1,4 +1,6 @@
 <?php
+
+
 require(__DIR__ . '/includes/connexion.php');
 
 
@@ -10,7 +12,6 @@ if (!empty($_GET['s'])) {
     $request = $db->query('SELECT * FROM article');
     $articles = $request->fetchAll();
 }
-
 ?>
 
 <!doctype html>
@@ -18,23 +19,30 @@ if (!empty($_GET['s'])) {
 <head>
     <meta charset="UTF-8">
     <title>Test de recherche</title>
-    <style>
-
-    </style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
-    <h1>Notre simple blog</h1>
-    <article>
+    <h1 id="titre"><a href="#">Notre simple blog</a></h1>
+
+    <div class="article">
         <?php if (empty($articles)): ?>
             <div class="error">Pas d'article disponible</div>
         <?php else: ?>
-        <?php foreach ($articles as $article): ?>
-            <div class="title"><?= $article['titre'] ?></div>
-            <div class="contenu"><?= $article['contenu'] ?></div>
-        <?php endforeach ?>
+            <?php foreach ($articles as $article): ?>
+                <article class="article">
+                    <h1 class="titre"><a href="#"><?= $article['titre'] ?></a></h1>
+
+                    <div class="contenu">
+                        <?= substr($article['contenu'], 0, 200) ?>...
+                        [<a href="#">Lire la suite</a>]
+                    </div>
+                </article>
+            <?php endforeach ?>
         <?php endif ?>
-    </article>
+    </div>
 </div>
 </body>
 </html>

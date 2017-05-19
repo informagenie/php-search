@@ -1,0 +1,49 @@
+body {
+    overflow: hidden;
+    background-color: #F0F0F0;
+}
+
+.container {
+    width: 700px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00b0;
+}
+
+#titre {
+    margin: 10px 0 50px 0;
+}
+
+.titre, #titre {
+
+    padding: 10px;
+    background: #43a0a3;
+}
+
+.titre a, #titre a {
+    color: #F0F0F0;
+    background: #43a0a3;
+}
+
+.error {
+    color: white;
+    background: #a2241f;
+    padding: 5px;
+}
+
+.article {
+    box-shadow: 1px 1px 1px green;
+    padding: 0 5px 10px 5px;
+    margin: 10px;
+}
