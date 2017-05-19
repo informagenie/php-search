@@ -3,13 +3,14 @@ require_once __DIR__ . '/includes/config.php';
 
 $query = "";
 
-$sql = "SELECT titre, contenu, DATE_FORMAT(date_creattion, '%d/%m/%Y à %i:%s') creation FROM article";
+$sql = "SELECT titre, contenu, DATE_FORMAT(date_creattion, '%d/%m/%Y à %h:%i') creation FROM article";
 if (!empty($_GET['s'])) {
     $query = strtolower(trim(htmlspecialchars($_GET['s'])));
     $sql .= " WHERE titre LIKE '%$query%' OR contenu LIKE '%$query%'";
 }
 
 $request = $db->query($sql);
+
 //Récupère tous les articles sous forme d'un tableau
 $articles = $request->fetchAll();
 
@@ -36,7 +37,8 @@ $nb_article = count($articles);
 
     <div class="search">
         <form action="./">
-            <input value="<?= $query ?>" autofocus placeholder="Votre recherche" type="text" name="s" id="search">
+            <input value="<?= $query ?>" autocomplete="off" autofocus placeholder="Votre recherche" type="text" name="s"
+                   id="search">
             <input type="submit" value="Rechercher" class="btn">
         </form>
     </div>
@@ -52,7 +54,7 @@ $nb_article = count($articles);
             <?php foreach (array_reverse($articles) as $article): ?>
                 <article class="article">
                     <h2 class="titre"><a href="#"><?= $article['titre'] ?></a></h2>
-                    <date><?= $article['creation'] ?></date>
+                    <date><em><?= $article['creation'] ?></em></date>
                     <div class="contenu">
                         <?= mark($query, substr($article['contenu'], 0, 200)) ?>...
                         [<a class="btn" href="#">Lire la suite</a>]
