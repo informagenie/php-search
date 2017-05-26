@@ -14,6 +14,7 @@ $request = $db->query($sql);
 //Récupère tous les articles sous forme d'un tableau
 $articles = $request->fetchAll();
 
+
 $nb_article = count($articles);
 
 ?>
@@ -53,7 +54,7 @@ $nb_article = count($articles);
 
             <?php foreach (array_reverse($articles) as $article): ?>
                 <article class="article">
-                    <h2 class="titre"><a href="#"><?= $article['titre'] ?></a></h2>
+                    <h2 class="titre"><a href="#"><?= mark($query, $article['titre']) ?></a></h2>
                     <date><em><?= $article['creation'] ?></em></date>
                     <div class="contenu">
                         <?= mark($query, substr($article['contenu'], 0, 200)) ?>...

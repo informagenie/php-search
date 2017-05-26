@@ -3,8 +3,8 @@
 /**
  * Entoure toutes les occurrences $mark dans $content par la balise <mark></mark>
  *
- * @param $mark
- * @param $content
+ * @param String $mark
+ * @param String $content
  * @return string
  */
 function mark($mark, $content)
