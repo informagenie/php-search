@@ -21,7 +21,7 @@ Une illustration de la création d'un blog basique avec une barre de recherche d
         date_creation DATETIME
     )ENGINE=MyISAM
 ```
-Ouvrez include/connexion.php et commentez la connexion sqlite et décommentez la connexion mysql
+- Ouvrez `includes/connexion.php` et commentez la connexion sqlite et décommentez la connexion mysql
 
 ```php
 	#$db = new PDO('sqlite:'. __DIR__.'/../db');
