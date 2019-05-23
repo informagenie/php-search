@@ -3,13 +3,15 @@ require_once __DIR__ . '/includes/config.php';
 
 $query = "";
 
-$sql = "SELECT titre, contenu, DATE_FORMAT(date_creattion, '%d/%m/%Y à %h:%i') creation FROM article";
+$sql = "SELECT titre, contenu, date_creation creation FROM article";
 if (!empty($_GET['s'])) {
     $query = strtolower(trim(htmlspecialchars($_GET['s'])));
     $sql .= " WHERE titre LIKE '%$query%' OR contenu LIKE '%$query%'";
 }
 
 $request = $db->query($sql);
+
+//print_r($db->errorInfo());
 
 //Récupère tous les articles sous forme d'un tableau
 $articles = $request->fetchAll();

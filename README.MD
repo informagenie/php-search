@@ -11,7 +11,7 @@ Une illustration de la création d'un blog basique avec une barre de recherche d
 
     `git clone https://github.com/informagenie/php-search.git`
 
-- Créez la base de données **informagenie** et créez les tables avec cette requête sql
+- Créez la base de données **informagenie** et créez la table article avec cette requête sql
 
 ```mysql
     CREATE TABLE article(
@@ -21,9 +21,15 @@ Une illustration de la création d'un blog basique avec une barre de recherche d
         date_creation DATETIME
     )ENGINE=MyISAM
 ```
+Ouvrez include/connexion.php et commentez la connexion sqlite et décommentez la connexion mysql
+
+```php
+	#$db = new PDO('sqlite:'. __DIR__.'/../db');
+    	$db = new PDO('mysql:host=localhost;dbname=informagenie;charset=utf8', 'root', '');
+```
 
 - Creation des articles
-Vous pouvez vous servir de PHPMYADMIN pour créer les données où bien rapidement vous pouvez ajouter ces enregistremets
+Vous pouvez vous servir de PHPMYADMIN pour créer les articles ou bien rapidement vous pouvez ajouter ces enregistremets
 
 ```mysql
     INSERT INTO `article` (`id`, `titre`, `contenu`, `date_creattion`) VALUES
